@@ -1,0 +1,36 @@
+@import './src/vars.scss';
+
+header {
+    border-bottom: 2px solid $red;
+    .header-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 3em 2em;
+        max-width: 1200px;
+        margin: 0 auto;
+        .header-left {
+            img {
+                width: 60%;
+            }
+        }
+        .header-right {
+            ul {
+                display: flex;
+                li {
+                    list-style-type: none;
+                    margin: 0em 0.2em;
+                    padding: 1em 0.6em;
+                    font-size: 2em;
+                    &:last-child {
+                        padding-right: 0em;
+                    }
+                    a {
+                        color: $green;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import 'reset-css';
+@import 'vars';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    @include autoRegular();
+    h1 {
+        @include autoLight();
+        font-size: 3em;
+    }
+    h2 {
+        @include autoLight();
+        font-size: 2.6em;
+    }
+    h3 {
+        @include autoRegular();
+        font-size: 2.2em;
+    }
+    h4 {
+        @include autoRegular();
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1.6em;
+    }
+    // Wrap all component.html in a <section class="wrapper"> so they inherit this style block to keep everything centered and tidy.
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em 3em 0em;
+    }
+}

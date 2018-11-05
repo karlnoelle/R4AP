@@ -1,0 +1,23 @@
+.submit-form {
+    height: 70px;
+    background: linear-gradient(-216deg, #FFEB3B, #00BCD4);
+    box-shadow: 1px -4px 13px 4px #6388f5;
+    transition: all 0.2s ease-in-out;
+    padding: 0em 3em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: -7px -2px 14px #db12fb;
+    font-size: 3em;
+    cursor: pointer;
+    &:hover {
+        background: linear-gradient(-166deg, #d0f312, #ff3ba2);
+        box-shadow: 8px -5px 20px 5px #2de20e;
+        transform: rotate(5deg);
+    }
+    &:active {
+        background: linear-gradient(-216deg, #00BCD4, #FFEB3B);
+        box-shadow: -4px 17px 20px 5px #e27c0e;
+        transform: rotate(10deg);
+    }
+}

@@ -1,0 +1,41 @@
+/* COLOR VARIABLES */
+$red: #ff0049;
+$green: #29b4ad;
+
+/* FONT MIXINS */
+
+@mixin autoLight {
+    font-family: auto-pro-new, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin autoLightItalic {
+    font-family: auto-pro-1-new, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin autoRegular {
+    font-family: auto-pro-new, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin autoRegularItalic {
+    font-family: auto-pro-1-new, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin autoBold {
+    font-family: auto-pro-new, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin autoBoldItalic {
+    font-family: auto-pro-1-new, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
