@@ -8,11 +8,13 @@ import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { RootComponent } from './root/root.component';
 import { AdminComponent } from './admin/admin.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 
 const appRoutes: Routes = [
   { path: '', component: RootComponent },
   { path: 'about', component: AboutComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'create-event', component: CreateEventComponent },
   { path: 'admin', component: AdminComponent },
 ]
 
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     AboutComponent,
     EventsComponent,
     RootComponent,
-    AdminComponent
+    AdminComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
