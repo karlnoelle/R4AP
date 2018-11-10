@@ -2,6 +2,10 @@
 
 header {
     border-bottom: 2px solid $red;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0em 0.2em 1em rgba(0, 0, 7, 0.1);
     .header-wrapper{
         display: flex;
         justify-content: space-between;

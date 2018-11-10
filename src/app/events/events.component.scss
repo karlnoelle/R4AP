@@ -1,0 +1,28 @@
+@import '../../vars.scss';
+
+h1 {
+    padding-bottom: 1em;
+}
+
+.events-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
+    li {
+        display: grid;
+        grid-template-columns: 5em 1fr;
+        align-items: center;
+        border: 1px solid $red;
+        min-height: 5em;
+        border-radius: 0.5em;
+        padding: 0.8em;
+        font-size: 1.4em;
+        .event-name {
+            padding-bottom: 0.4em;
+        }
+        .event-location {
+            @include autoRegularItalic();
+        }
+    }
+}
