@@ -5,10 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { RootComponent } from './root/root.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
-import { RootComponent } from './root/root.component';
+import { EventComponent } from './event/event.component';
 import { AdminComponent } from './admin/admin.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'events', component: EventsComponent },
   { path: 'create-event', component: CreateEventComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'event/:id', component: EventComponent }
 ]
 
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     EventsComponent,
     RootComponent,
     AdminComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +45,7 @@ const appRoutes: Routes = [
       { enableTracing: true }
     )
   ],
-  providers: [
-    EventService
-  ],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

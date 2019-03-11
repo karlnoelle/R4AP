@@ -26,6 +26,10 @@ export class EventService {
       location: location,
       address: address
     };
-      return this.http.post(`${this.uri}/create-event`, event);
+      return this.http.post(`${this.uri}/event/add`, event);
+  }
+
+  deleteEvent(id) {
+    return this.http.get(`${this.uri}/event/delete/${id}`);
   }
 }

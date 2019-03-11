@@ -41,15 +41,27 @@ router.route('/create-event').post((req, res) => {
         });
 });
 
-router.route('/event/:eventID').get((req, res) => {
+router.route('/event/:id').get((req, res) => {
     Event.findById(req.params.id, (err, event) => {
-        if (err) {
+        if (err)
             res.sendStatus(err);
-        } else {
+        else
             res.json(event);
-        }
-    })
+    });
 });
+
+router.route('/event/add').post((req, res) => {
+    let event = new Event(req.body);
+    event.save()
+        .then(event => {
+            res.status(200).json({'event': 'Event created successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('Event creation failed!');
+        });
+});
+
+
 
 app.use('/', router);
 

@@ -25,7 +25,7 @@ export class CreateEventComponent implements OnInit {
 
   addEvent(name, date, time, location, address, description) {
     this.eventService.addEvent(name, date, time, location, address, description).subscribe(() => {
-      this.router.navigate(['/events']);
+      this.router.navigate(['/event/${id}']);
     });
   }
 

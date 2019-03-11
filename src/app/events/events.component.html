@@ -1,7 +1,7 @@
 <section class="wrapper">
   <h1>Events List</h1>
   <ul class="events-list">
-    <li *ngFor="let event of events">
+    <li *ngFor="let event of events" (click)="viewEvent(element._id)">
       <div class="event-date"> {{ event.date }} </div>
       <div>
         <div class="event-name"> {{ event.name }} </div>

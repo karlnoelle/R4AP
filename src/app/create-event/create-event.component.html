@@ -1,33 +1,33 @@
 <section class="wrapper">
   <div class="create-event">
     <h1>Create running event</h1>
-    <form class="create-event-form">
+    <form class="create-event-form" [formGroup]="createForm">
       <div class="input-field event-name">
         <label>Event Name</label>
-        <input placeholder="event name"/>
+        <input placeholder="Event Name" formControlName="name" #name>
       </div>
       <div class="input-field event-date">
         <label>Event Date</label>
-        <input placeholder="mm/dd/yyyy"/>
+        <input placeholder="mm/dd/yyyy" formControlName="date" #date>
       </div>
       <div class="input-field event-time">
         <label>Event Time</label>
-        <input placeholder="xx:xx"/>
+        <input placeholder="xx:xx" formControlName="time" #time>
       </div>
       <div class="input-field event-location">
         <label>Event Location</label>
-        <input placeholder="location"/>
+        <input placeholder="location" formControlName="location" #location>
       </div>
       <div class="input-field event-address">
         <label>Event Address</label>
-        <input placeholder="address"/>
+        <input placeholder="address" formControlName="address" #address>
       </div>
       <div class="input-field event-description">
         <label>Event Description</label>
-        <textarea placeholder="event description" rows="4"></textarea>
+        <textarea placeholder="event description" rows="4" formControlName="description" #description></textarea>
       </div>
     </form>
     <a routerLink="/admin" class="cancel">Cancel</a>
-    <button class="submit-form">Make The Event Page!</button>
+    <button class="submit-form" (click)="addEvent(name.value, date.value, time.value, location.value, address.value, description.value)">Make The Event Page!</button>
   </div>
 </section>
