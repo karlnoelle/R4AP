@@ -18,10 +18,6 @@ export class EventsComponent implements OnInit {
   constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit() {
-    //display all events in DB in console:
-    // this.eventService.getEvents().subscribe((events) => {
-    //   console.log(events);
-    // });
     this.fetchEvents();
   }
   
@@ -34,6 +30,8 @@ export class EventsComponent implements OnInit {
   }
 
   viewEvent(id) {
-    this.router.navigate([`/event/${id}`]);
+    this.eventService.getEventById(id).subscribe((data: Event[]) => {
+      this.router.navigate([`/event/${id}`]);
+    });
   }
 }

@@ -11,6 +11,7 @@ import { EventService } from '../event.service';
 export class CreateEventComponent implements OnInit {
 
   createForm: FormGroup;
+  id: String;
 
   constructor(private eventService: EventService, private formBuilder: FormBuilder, private router: Router) {
     this.createForm = this.formBuilder.group({
@@ -23,9 +24,9 @@ export class CreateEventComponent implements OnInit {
     });
   }
 
-  addEvent(name, date, time, location, address, description) {
-    this.eventService.addEvent(name, date, time, location, address, description).subscribe(() => {
-      this.router.navigate(['/event/${id}']);
+  addEvent(name, description, time, date, location, address) {
+    this.eventService.addEvent(name, description, time, date, location, address).subscribe(() => {
+      this.router.navigate([`/event/${this.id}`]);
     });
   }
 
